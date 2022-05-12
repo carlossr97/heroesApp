@@ -1,1 +1,10 @@
-<p>listado works!</p>
+<h1>Heroes: </h1>
+
+
+
+<div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="center" fxLayout.xs="column">
+    <div fxFlex="20" fxFlex.lg="15" fxFlex.sm="30" *ngFor="let item of heroes">
+        <app-heroe-tarjeta-component [heroe]="item "> </app-heroe-tarjeta-component>
+    </div>
+
+</div>

@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HttpClientModule } from "@angular/common/http";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { HttpClientModule } from "@angular/common/http";
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
