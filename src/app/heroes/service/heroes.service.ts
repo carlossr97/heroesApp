@@ -14,4 +14,8 @@ export class HeroesService {
   getHeroes(){
     return this.httpClient.get<heroes[]>('http://localhost:3000/heroes') // esto regresara un observable.
   }
+
+  getHeroe(heroe:string){
+    return this.httpClient.get<heroes>(`http://localhost:3000/heroes/${heroe}`) // esto regresara un observable.
+  }
 }
