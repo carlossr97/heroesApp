@@ -23,4 +23,12 @@ export class HeroesService {
     return this.httpClient.get<heroes>(`${ this.baseURL }/heroes/${ heroe }`); 
   }
 
+  getSugerencia(termino:string){
+    return this.httpClient.get<heroes[]>(`${ this.baseURL }/heroes?q=${ termino }`); 
+  }
+
+  agregarHeroe(heroe:heroes){
+    return this.httpClient.post( `${ this.baseURL }/heroes`,heroe);
+  }
+
 }
