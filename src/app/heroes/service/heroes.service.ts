@@ -30,5 +30,10 @@ export class HeroesService {
   agregarHeroe(heroe:heroes){
     return this.httpClient.post( `${ this.baseURL }/heroes`,heroe);
   }
+  
+  actualizarHeroe(heroe:heroes){
+    return this.httpClient.put(`${ this.baseURL }/heroes/${heroe.id}`,heroe);
+  }
+
 
 }
