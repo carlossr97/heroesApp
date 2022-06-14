@@ -35,5 +35,8 @@ export class HeroesService {
     return this.httpClient.put(`${ this.baseURL }/heroes/${heroe.id}`,heroe);
   }
 
+  borrarHeroe(id: string){
+    return this.httpClient.delete(`${ this.baseURL }/heroes/${id}`);
+  }
 
 }

@@ -9,7 +9,7 @@
   "heroes": [
     {
       "id": "dc-batman",
-      "superhero": "Batman",
+      "superhero": "Batman XD",
       "publisher": "DC Comics",
       "alter_ego": "Bruce Wayne",
       "first_appearance": "Detective Comics #27",
@@ -62,14 +62,6 @@
       "alter_ego": "J\"onn J\"onzz",
       "first_appearance": "Detective Comics #225",
       "characters": "Martian Manhunter"
-    },
-    {
-      "id": "dc-robin",
-      "superhero": "Robin/Nightwing",
-      "publisher": "DC Comics",
-      "alter_ego": "Dick Grayson",
-      "first_appearance": "Detective Comics #38",
-      "characters": "Dick Grayson"
     },
     {
       "id": "dc-blue",
@@ -152,47 +144,12 @@
       "characters": "Clinton Francis Barton"
     },
     {
-      "id": "marvel-cyclops",
-      "superhero": "Cyclops",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Scott Summers",
-      "first_appearance": "X-Men #1",
-      "characters": "Scott Summers"
-    },
-    {
       "id": "marvel-silver",
       "superhero": "Silver Surfer",
       "publisher": "Marvel Comics",
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
-    },
-    {
-      "superhero": "carlos",
-      "alter_ego": "master",
-      "characters": "todos xD",
-      "first_appearance": "1997",
-      "publisher": "DC Comics",
-      "alt_image": "asdasdad",
-      "id": "WAyhP8G"
-    },
-    {
-      "superhero": "dasdasd",
-      "alter_ego": "asdas",
-      "characters": "",
-      "first_appearance": "dasdasda",
-      "publisher": "Marvel Comics",
-      "alt_image": "asdasdas",
-      "id": "ymvjGcQ"
-    },
-    {
-      "superhero": "capitan",
-      "alter_ego": "capitan",
-      "characters": "xD",
-      "first_appearance": "nose",
-      "publisher": "DC Comics",
-      "alt_image": "data:image/jpeg;base64,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",
-      "id": "Lxz0Zu9"
     },
     {
       "superhero": "cielo",
@@ -204,103 +161,13 @@
       "id": "wtTpM7I"
     },
     {
-      "superhero": "asd",
-      "alter_ego": "sd",
-      "characters": "sdsa",
-      "first_appearance": "das",
+      "superhero": "El BANANERO",
+      "alter_ego": "gordo",
+      "characters": "sapee",
+      "first_appearance": "sapee",
       "publisher": "DC Comics",
-      "alt_image": "asdsd",
-      "id": "2KRsS8i"
-    },
-    {
-      "superhero": "asda",
-      "alter_ego": "asdas",
-      "characters": "asdasda",
-      "first_appearance": "asdasdad",
-      "publisher": "Marvel Comics",
-      "alt_image": "dasd",
-      "id": "BTkqy6J"
-    },
-    {
-      "superhero": "sadas",
-      "alter_ego": "sdsasad",
-      "characters": "asdasd",
-      "first_appearance": "sasadasd",
-      "publisher": "DC Comics",
-      "alt_image": "asdasd",
-      "id": "qj_b5-f"
-    },
-    {
-      "superhero": "sadas",
-      "alter_ego": "asddas",
-      "characters": "asdasd",
-      "first_appearance": "das",
-      "publisher": "Marvel Comics",
-      "alt_image": "asdas",
-      "id": "o4o0SAA"
-    },
-    {
-      "superhero": "asdas",
-      "alter_ego": "asda",
-      "characters": "asdas",
-      "first_appearance": "asdas",
-      "publisher": "Marvel Comics",
-      "alt_image": "asd",
-      "id": "O6reEz2"
-    },
-    {
-      "superhero": "asd",
-      "alter_ego": "asd",
-      "characters": "aasd",
-      "first_appearance": "asd",
-      "publisher": "DC Comics",
-      "alt_image": "asd",
-      "id": "qz_vQ87"
-    },
-    {
-      "superhero": "sadsa",
-      "alter_ego": "asdas",
-      "characters": "",
-      "first_appearance": "",
-      "publisher": "DC Comics",
-      "alt_image": "",
-      "id": "NJroh8O"
-    },
-    {
-      "superhero": "batman2",
-      "alter_ego": "asd",
-      "characters": "asd",
-      "first_appearance": "asd",
-      "publisher": "DC Comics",
-      "alt_image": "asd",
-      "id": "ZzXmBn3"
-    },
-    {
-      "superhero": "batman2",
-      "alter_ego": "asd",
-      "characters": "asd",
-      "first_appearance": "asd",
-      "publisher": "DC Comics",
-      "alt_image": "asd",
-      "id": "kuvsVgL"
-    },
-    {
-      "superhero": "asda",
-      "alter_ego": "asda",
-      "characters": "daas",
-      "first_appearance": "asdasd",
-      "publisher": "DC Comics",
-      "alt_image": "sda",
-      "id": "hcYH2-T"
-    },
-    {
-      "superhero": "asd",
-      "alter_ego": "asda",
-      "characters": "asdsa",
-      "first_appearance": "asd",
-      "publisher": "DC Comics",
-      "alt_image": "asdsa",
-      "id": "aH6nw8e"
+      "alt_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGjCC5aClILCcRMwqgjLf7BTycb0T0ngM_pw&usqp=CAU",
+      "id": "-6WrMPc"
     }
   ]
 }

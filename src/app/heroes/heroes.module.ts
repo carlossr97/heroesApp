@@ -11,6 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeroeTarjetaComponentComponent } from './components/heroe-tarjeta-component/heroe-tarjeta-component.component';
 import { HeroePipe } from './pipes/heroe.pipe';
 import { FormsModule } from '@angular/forms';
+import { ConfirmarComponent } from './components/confirmar/confirmar.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     ListadoComponent,
     BuscarComponent,
     HeroeTarjetaComponentComponent,
-    HeroePipe
+    HeroePipe,
+    ConfirmarComponent
   ],
   imports: [
     CommonModule,

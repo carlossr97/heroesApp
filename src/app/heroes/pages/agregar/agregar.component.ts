@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { heroes, Publisher } from 'src/app/interfaces/heroes';
+import { ConfirmarComponent } from '../../components/confirmar/confirmar.component';
 import { HeroesService } from '../../service/heroes.service';
 
 @Component({
@@ -37,10 +40,17 @@ showButton:boolean=false;
   constructor(
     private heroeService:HeroesService,
     private activatedRoute:ActivatedRoute,
-    private router:Router
+    private router:Router,
+    private snackbar:MatSnackBar,
+    private matDialog:MatDialog
   ) { }
 
   ngOnInit(): void {
+
+    if(!this.router.url.includes('editar')){
+      this.showButton=true;
+      return;
+    }
     this.activatedRoute.params
     .pipe(
       switchMap(({id })=> this.heroeService.getHeroe(id))
@@ -48,9 +58,7 @@ showButton:boolean=false;
         heroe => this.heroe = heroe
       
       );
-      if(this.router.url=== '/heroes/agregar'){
-        this.showButton=true;
-      }
+    
 
   }
 
@@ -64,8 +72,9 @@ showButton:boolean=false;
       
       this.heroeService.agregarHeroe(this.heroe).subscribe(
       (resp:any)=>{
-
+        
         this.router.navigate(['/heroes',resp.id]);
+        this.mostrarSnackbar('Registro Creado')
         console.log(this.heroe.id);
         console.log(resp);
 
@@ -75,10 +84,37 @@ showButton:boolean=false;
     else{
     
       this.heroeService.actualizarHeroe(this.heroe).subscribe(
-        resp => console.log("update",resp)
+        resp => this.mostrarSnackbar('Registro actualizado')
       )
     }
   }
 
+  borrar(id:any){
+    const dialog =this.matDialog.open(ConfirmarComponent,{
+      width:'250px',
+      data: this.heroe
+    })
+
+    dialog.afterClosed().subscribe(
+      resp=>{
+        if(resp) {
+          this.heroeService.borrarHeroe(id).subscribe(
+            resp => {
+              console.log("se elimino el heroe",resp);
+              this.router.navigate(['heroes','listado']);
+            }
+          )
+        }
+        
+      }
+    )
+  
+    }
  
+  mostrarSnackbar(mensaje:string){
+    this.snackbar.open( mensaje,'Aceptar',{
+      duration: 2500
+    } )
+  }
+
 }

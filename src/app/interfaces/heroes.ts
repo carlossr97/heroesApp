@@ -1,4 +1,5 @@
 export interface heroes {
+        ext?:              boolean;
         id?:               string;
         superhero:        string;
         publisher:        Publisher;
